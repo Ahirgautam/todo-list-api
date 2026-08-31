@@ -1,0 +1,33 @@
+{
+  "name": "todo_list_api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahirgautam/todo-list-api.git"
+  },
+  "author": "gautam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahirgautam/todo-list-api/issues"
+  },
+  "homepage": "https://github.com/Ahirgautam/todo-list-api#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "express-slow-down": "^3.1.1",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.0",
+    "mysql2": "^3.24.2",
+    "sequelize": "^6.37.8",
+    "zod": "^4.5.4"
+  }
+}
