@@ -20,6 +20,7 @@ try {
 }
 catch (err) {
     console.log("Error connecting database")
+
 }
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,

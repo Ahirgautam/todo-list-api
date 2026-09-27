@@ -2,7 +2,7 @@ import authService from "../services/auth.service.js"
 import jwt from "jsonwebtoken"
 import { generateToken } from "../utils/jwt.util.js";
 import { verifyToken } from "../utils/jwt.util.js";
-import { token } from "morgan";
+// import { token } from "morgan";
 
 const registerUser = async (req, res) => {
     try {
@@ -18,7 +18,7 @@ const registerUser = async (req, res) => {
             path: "/api/auth"
         })
 
-        res.status(201).json({ success: true, message: "User Registered", token: "hii" })
+        res.status(201).json({ success: true, message: "User Registered", token: access_token })
     }
     catch (err) {
         res.status(500).json({ success: false, message: err.message || "Internal Server Error" })
@@ -72,7 +72,7 @@ const refreshToken = async (req, res) => {
             throw new Error("No Data Found!")
         }
         const access_token = generateToken(user.id, user.email)
-        res.json({ access_token })
+        res.json({ token: access_token })
     }
     catch (err) {
         res.status(500).json({ message: err.message || "Internal server error" })
